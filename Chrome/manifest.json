@@ -1,0 +1,21 @@
+{
+  "name": "Murdoch Block",
+  "version": "1.0",
+  "description": "Blocks websites owned by Newscorp.",
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "permissions": [
+    "tabs", "http://*/*"
+  ],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches" : ["http://*/*"],
+      "js" : ["blocked.js"],
+      "run_at" : "document_start"
+    }
+  ] 
+}

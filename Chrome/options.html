@@ -1,0 +1,259 @@
+<html>
+    <head>
+        <title>Murdoch Block - Options</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        
+        <div id="header"><h1>Murdoch Block Options</h1></div>
+        
+        <div class="section-header first">Select websites to Block</div>
+        <div class="section-items">
+            <br><center>
+            Please select the websites you wish to block. A preliminary selection has been made for you by default. Press the <b>save button on the bottom of the page</b> to finalize your selection.
+            <p>
+            <button onclick="resetBlockList();init();">Reset to Default</button></center>
+        </div>
+        
+        <div class="section-header first">
+            <input type="checkbox" id="CNP" onclick="selectGroup(this)"  />&nbsp;Cable Network Programming
+        </div>
+        <p>
+        <div class="section-items">
+        <input type="checkbox" name="CNP" id="bigtennetwork.com" onclick="markDirty()"  />&nbsp;Big Ten Network<br /> 
+        <input type="checkbox" name="CNP" id="foxbusiness.com" onclick="markDirty()"  />&nbsp;FOX Business Network<br /> 
+        <input type="checkbox" name="CNP" id="thefoxmoviechannel.com" onclick="markDirty()"  />&nbsp;Fox Movie Channel<br /> 
+        <input type="checkbox" name="CNP" id="foxnews.com" onclick="markDirty()"  />&nbsp;FOX News Channel<br /> 
+        <input type="checkbox" name="CNP" id="foxcable.com" onclick="markDirty()"  />&nbsp;FOX College Sports<br /> 
+        <input type="checkbox" name="CNP" id="foxsports.com" onclick="markDirty()"  />&nbsp;FOX Sports Enterprises<br /> 
+        <input type="checkbox" name="CNP" id="foxsportsesp.com" onclick="markDirty()"  />&nbsp;Fox Deportes<br /> 
+        <input type="checkbox" name="CNP" id="foxsoccer.com" onclick="markDirty()"  />&nbsp;FOX Soccer Channel<br /> 
+        <input type="checkbox" name="CNP" id="fuel.tv" onclick="markDirty()"  />&nbsp;Fuel TV<br /> 
+        <input type="checkbox" name="CNP" id="fxnetworks.com" onclick="markDirty()"  />&nbsp;FX<br /> 
+        <input type="checkbox" name="CNP" id="animals.nationalgeographic.com" onclick="markDirty()"  />&nbsp;Nat Geo Wild<br /> 
+        <input type="checkbox" name="CNP" id="nationalgeographic.com" onclick="markDirty()" />&nbsp;National Geographic Channel United States<br /> 
+        <input type="checkbox" name="CNP" id="natgeotv.com" onclick="markDirty()" />&nbsp;National Geographic Channel Worldwide <br /> 
+        <input type="checkbox" name="CNP" id="speedtv.com" onclick="markDirty()" />&nbsp;Speed <br /> 
+        <input type="checkbox" name="CNP" id="startv.com" onclick="markDirty()" />&nbsp;STAR<br /> 
+        <input type="checkbox" name="CNP" id="stats.com" onclick="markDirty()" />&nbsp;Stats, Inc.<br /> 
+        </div>
+        
+        <div class="section-header first">
+            <input type="checkbox" id="FE" onclick="selectGroup(this)"  />&nbsp;Filmed Entertainment
+        </div>
+        <p>
+        <div class="section-items">
+        <input type="checkbox" name="FE" id="foxmovies.com" onclick="markDirty()"  />&nbsp;20th Century Fox <br />  
+        <input type="checkbox" name="FE" id="fox.es" onclick="markDirty()"  />&nbsp;20th Century Fox Espanol<br />  
+        <input type="checkbox" name="FE" id="foxconnect.com" onclick="markDirty()"  />&nbsp;20th Century Fox Home Entertainment<br />  
+        <input type="checkbox" name="FE" id="foxinternational.com" onclick="markDirty()"  />&nbsp;20th Century Fox International<br />  
+        <input type="checkbox" name="FE" id="fox.com" onclick="markDirty()"  />&nbsp;20th Century Fox Television<br />  
+        <input type="checkbox" name="FE" id="foxsearchlight.com" onclick="markDirty()"  />&nbsp;Fox Searchlight Pictures<br />  
+        <input type="checkbox" name="FE" id="foxstudiosaustralia.com" onclick="markDirty()"  />&nbsp;Fox Studios Australia<br />  
+        <input type="checkbox" name="FE" id="foxstudios.com" onclick="markDirty()"  />&nbsp;Fox Studios LA<br />  
+        <input type="checkbox" name="FE" id="blueskystudios.com" onclick="markDirty()"  />&nbsp;Blue Sky Studios<br />  
+        <input type="checkbox" name="FE" id="shinegroup.tv" onclick="markDirty()"  />&nbsp;Shine Group<br /> 
+        </div>
+        
+        
+        <div class="section-header first">
+            <input type="checkbox" id="TV" onclick="selectGroup(this)"  />&nbsp;Television
+        </div>
+        <p> 
+        <div class="section-items">
+        <input type="checkbox" name="TV" id="foxsports.com.au" onclick="markDirty()"  />&nbsp;FOX Sports Australia<br />  
+        <input type="checkbox" name="TV" id="mynetworktv.com" onclick="markDirty()"  />&nbsp;MyNetworkTV<br />  
+        <input type="checkbox" name="TV" id="myfoxny.com" onclick="markDirty()"  />&nbsp;WNYW-5 New York <br />  
+        <input type="checkbox" name="TV" id="my9tv.com" onclick="markDirty()"  />&nbsp;WWOR-TV-9 New Jersey<br />  
+        <input type="checkbox" name="TV" id="myfoxla.com" onclick="markDirty()"  />&nbsp;KTTV-11-5 Los Angeles<br />  
+        <input type="checkbox" name="TV" id="my13la.com" onclick="markDirty()"  />&nbsp;KCOP-13 Los Angeles<br />  
+        <input type="checkbox" name="TV" id="myfoxchicago.com" onclick="markDirty()"  />&nbsp;WFLD-32 Chicago<br />  
+        <input type="checkbox" name="TV" id="my50chicago.com" onclick="markDirty()"  />&nbsp;WPWR-TV-50 Chicago<br />  
+        <input type="checkbox" name="TV" id="myfoxphilly.com" onclick="markDirty()"  />&nbsp;WTXF-TV-29 Philadelphia<br />  
+        <input type="checkbox" name="TV" id="myfoxboston.com" onclick="markDirty()"  />&nbsp;WFXT-25 Boston<br />  
+        <input type="checkbox" name="TV" id="myfoxdfw.com" onclick="markDirty()"  />&nbsp;KDFW-4 Dallas<br />  
+        <input type="checkbox" name="TV" id="watchmy27.com" onclick="markDirty()"  />&nbsp;KDFI-27 Dallas<br />  
+        <input type="checkbox" name="TV" id="myfoxdc.com" onclick="markDirty()"  />&nbsp;WTTG-5 Washington D.C.<br />  
+        <input type="checkbox" name="TV" id="upn20dc.com" onclick="markDirty()"  />&nbsp;WDCA-20 Washington D.C.<br />  
+        <input type="checkbox" name="TV" id="myfoxtwincities.com" onclick="markDirty()"  />&nbsp;KMSP-TV-9 Minneapolis<br />  
+        <input type="checkbox" name="TV" id="my29tv.com" onclick="markDirty()"  />&nbsp;WFTC-29 Minneapolis<br />  
+        <input type="checkbox" name="TV" id="myfoxdetroit.com" onclick="markDirty()"  />&nbsp;WJBK-2 Detroit<br />  
+        <input type="checkbox" name="TV" id="myfoxatlanta.com" onclick="markDirty()"  />&nbsp;WAGA-5 Atlanta<br />  
+        <input type="checkbox" name="TV" id="my24wutb.com" onclick="markDirty()"  />&nbsp;WUTB-24 Baltimore<br />  
+        <input type="checkbox" name="TV" id="myfoxhouston.com" onclick="markDirty()"  />&nbsp;KRIV-26 Houston<br />  
+        <input type="checkbox" name="TV" id="my20houston.com" onclick="markDirty()"  />&nbsp;KTXH-20 Houston<br />  
+        <input type="checkbox" name="TV" id="myfoxtampabay.com" onclick="markDirty()"  />&nbsp;WTVT-13 Tampa Bay<br />  
+        <input type="checkbox" name="TV" id="myfoxorlando.com" onclick="markDirty()"  />&nbsp;WOFL-35 Orlando<br />  
+        <input type="checkbox" name="TV" id="myfoxphoenix.com" onclick="markDirty()"  />&nbsp;KSAZ-TV-10 Phoenix<br />  
+        <input type="checkbox" name="TV" id="my45.com" onclick="markDirty()"  />&nbsp;KUTP-45 Phoenix<br />  
+        <input type="checkbox" name="TV" id="myfoxmemphis.com" onclick="markDirty()"  />&nbsp;WHBQ-TV-13 Memphis<br />  
+        <input type="checkbox" name="TV" id="myfoxaustin.com" onclick="markDirty()"  />&nbsp;KTBC-7 Austin<br />  
+        <input type="checkbox" name="TV" id="wogx.com" onclick="markDirty()"  />&nbsp;WOGX-51 Ocala<br />  
+        </div>
+        
+        
+        <div class="section-header first">
+            <input type="checkbox" id="DBST" onclick="selectGroup(this)"  />&nbsp;Direct Broadcast Satellite Television
+        </div>
+        <p>
+        <div class="section-items">
+        <input type="checkbox" name="DBST" id="sky.com" onclick="markDirty()"  />&nbsp;BSkyB<br />  
+        <input type="checkbox" name="DBST" id="foxtel.com.au" onclick="markDirty()"  />&nbsp;FOXTEL<br />  
+        <input type="checkbox" name="DBST" id="sky.de" onclick="markDirty()"  />&nbsp;Sky Deutschland<br />  
+        <input type="checkbox" name="DBST" id="skytv.it" onclick="markDirty()"  />&nbsp;SKY Italia<br />  
+        </div>
+            
+        <div class="section-header first">
+            <input type="checkbox" id="PUB" onclick="selectGroup(this)"  />&nbsp;Publishing
+        </div>
+        <p>
+        <div class="section-items">
+        <input type="checkbox" name="PUB" id="alphamagazine.com.au" onclick="markDirty()"  />&nbsp;ALPHA<br />   
+        <input type="checkbox" name="PUB" id="dailytelegraph.com.au" onclick="markDirty()"  />&nbsp;Daily Telegraph<br />  
+        <input type="checkbox" name="PUB" id="donnahay.com.au" onclick="markDirty()"  />&nbsp;Donna Hay<br />  
+        <input type="checkbox" name="PUB" id="dowjones.com" onclick="markDirty()"  />&nbsp;Dow Jones<br />  
+        <input type="checkbox" name="PUB" id="goldcoast.com.au" onclick="markDirty()"  />&nbsp;Gold Coast Bulletin<br />  
+        <input type="checkbox" name="PUB" id="harpercollins.com" onclick="markDirty()"  />&nbsp;Harper Collins Publishers<br />  
+        <input type="checkbox" name="PUB" id="harpercollins.com.au" onclick="markDirty()"  />&nbsp;Harper Collins Australia <br />  
+        <input type="checkbox" name="PUB" id="harpercollins.ca" onclick="markDirty()"  />&nbsp;Harper Collins Canada<br />  
+        <input type="checkbox" name="PUB" id="harpercollinschildrens.com" onclick="markDirty()"  />&nbsp;Harper Collins Children's Books </a> <br/></li> 
+        <input type="checkbox" name="PUB" id="harpercollins.co.in" onclick="markDirty()"  />&nbsp;Harper Collins India <br />  
+        <input type="checkbox" name="PUB" id="harpercollins.co.nz" onclick="markDirty()"  />&nbsp;Harper Collins New Zealand <br />   
+        <input type="checkbox" name="PUB" id="harpercollins.co.uk" onclick="markDirty()"  />&nbsp;Harper Collins UK <br />  
+        <input type="checkbox" name="PUB" id="heraldsun.com.au" onclick="markDirty()"  />&nbsp;Herald Sun<br />  
+        <input type="checkbox" name="PUB" id="homelife.com.au" onclick="markDirty()"  />&nbsp;Inside Out <br />  
+        <input type="checkbox" name="PUB" id="nypost.com" onclick="markDirty()"  />&nbsp;New York Post<br />  
+        <input type="checkbox" name="PUB" id="newsamerica.com" onclick="markDirty()"  />&nbsp;News America Marketing<br />  
+        <input type="checkbox" name="PUB" id="newsint.co.uk" onclick="markDirty()"  />&nbsp;News International<br />  
+        <input type="checkbox" name="PUB" id="newsoftheworld.co.uk" onclick="markDirty()"  />&nbsp;News of the World<br />
+        <input type="checkbox" name="PUB" id="ntnews.com.au" onclick="markDirty()"  />&nbsp;NT News<br />  
+        <input type="checkbox" name="PUB" id="postcourier.com.pg" onclick="markDirty()"  />&nbsp;Post-Courier<br />  
+        <input type="checkbox" name="PUB" id="smartsource.net" onclick="markDirty()"  />&nbsp;Smart Source<br />  
+        <input type="checkbox" name="PUB" id="sundayheraldsun.com.au" onclick="markDirty()"  />&nbsp;Sunday Herald Sun<br />  
+        <input type="checkbox" name="PUB" id="adelaidenow.com.au" onclick="markDirty()"  />&nbsp;Sunday Mail<br />  
+        <input type="checkbox" name="PUB" id="sundaytasmanian.com.au" onclick="markDirty()"  />&nbsp;Sunday Tasmanian<br />   
+        <input type="checkbox" name="PUB" id="perthnow.com.au" onclick="markDirty()"  />&nbsp;Sunday Times<br />  
+        <input type="checkbox" name="PUB" id="theadvertiser.news.com.au" onclick="markDirty()"  />&nbsp;The Advertiser<br />  
+        <input type="checkbox" name="PUB" id="theaustralian.com.au" onclick="markDirty()"  />&nbsp;The Australian<br />  
+        <input type="checkbox" name="PUB" id="couriermail.com.au" onclick="markDirty()"  />&nbsp;The Courier-Mail<br />  
+        <input type="checkbox" name="PUB" id="thedaily.com" onclick="markDirty()"  />&nbsp;The Daily<br />  
+        <input type="checkbox" name="PUB" id="themercury.com.au" onclick="markDirty()"  />&nbsp;The Mercury<br />  
+        <input type="checkbox" name="PUB" id="thesundaymail.com.au" onclick="markDirty()"  />&nbsp;The Sunday Mail<br />  
+        <input type="checkbox" name="PUB" id="telegraph.co.uk" onclick="markDirty()"  />&nbsp;The Sunday Telegraph<br />  
+        <input type="checkbox" name="PUB" id="thesun.co.uk" onclick="markDirty()"  />&nbsp;The Sun<br />  
+        <input type="checkbox" name="PUB" id="thesundaytimes.co.uk" onclick="markDirty()"  />&nbsp;The Sunday Times<br />  
+        <input type="checkbox" name="PUB" id="thetimes.co.uk" onclick="markDirty()"  />&nbsp;The Times<br />  
+        <input type="checkbox" name="PUB" id="timesonline.co.uk" onclick="markDirty()"  />&nbsp;Times Literary Supplement<br />  
+        <input type="checkbox" name="PUB" id="wsj.com" onclick="markDirty()"  />&nbsp;The Wall Street Journal<br />  
+        <input type="checkbox" name="PUB" id="weeklytimesnow.com.au" onclick="markDirty()"  />&nbsp;Weekly Times<br />  
+        <input type="checkbox" name="PUB" id="zondervan.com" onclick="markDirty()"  />&nbsp;Zondervan<br /> 
+        </div>
+        
+        
+        <div class="section-header first">
+            <input type="checkbox" id="OA" onclick="selectGroup(this)"  />&nbsp;Other Assets
+        </div>
+        <p>
+        <div class="section-items">
+        <input type="checkbox" name="OA" id="americanidol.com" onclick="markDirty()"  />&nbsp;AmericanIdol.com<br />  
+        <input type="checkbox" name="OA" id="askmen.com" onclick="markDirty()"  />&nbsp;AskMen<br />  
+        <input type="checkbox" name="OA" id="careerone.com.au" onclick="markDirty()"  />&nbsp;careerone.com.au<br />  
+        <input type="checkbox" name="OA" id="carsguide.com.au" onclick="markDirty()"  />&nbsp;CARSguide.com.au<br />   
+        <input type="checkbox" name="OA" id="hulu.com" onclick="markDirty()"  />&nbsp;hulu.com<br />  
+        <input type="checkbox" name="OA" id="ign.com" onclick="markDirty()"  />&nbsp;IGN Entertainment <br />  
+        <input type="checkbox" name="OA" id="milkround.com" onclick="markDirty()"  />&nbsp;Milkround<br />  
+        <input type="checkbox" name="OA" id="nrl.com" onclick="markDirty()"  />&nbsp;National Rugby League<br />  
+        <input type="checkbox" name="OA" id="nds.com" onclick="markDirty()"  />&nbsp;NDS<br />  
+        <input type="checkbox" name="OA" id="news.com.au" onclick="markDirty()"  />&nbsp;News.com.au<br />  
+        <input type="checkbox" name="OA" id="newsdigitalmedia.com.au" onclick="markDirty()"  />&nbsp;News Digital Media<br />  
+        <input type="checkbox" name="OA" id="newsoutdoor.com" onclick="markDirty()"  />&nbsp;News Outdoor <br />  
+        <input type="checkbox" name="OA" id="scout.com" onclick="markDirty()"  />&nbsp;Scout<br />  
+        <input type="checkbox" name="OA" id="springwidgets.com" onclick="markDirty()"  />&nbsp;Spring Widgets <br />  
+        <input type="checkbox" name="OA" id="truelocal.com.au" onclick="markDirty()"  />&nbsp;truelocal.com.au<br />  
+        <input type="checkbox" name="OA" id="whatifsports.com" onclick="markDirty()"  />&nbsp;WhatIfSports<br />   
+        </div>
+
+        <div class="section-items">
+            <center>
+            <button id="save-button" style="font-weight:bold" onclick="save()">Save</button>
+            <button onclick="init()">Cancel</button>
+            </center>
+        </div>
+
+            <script>
+                var customDomainsTextbox;
+                var saveButton;
+                
+                init();
+                
+                function init() {
+                    saveButton = document.getElementById("save-button");
+                    
+                    var items = document.getElementsByTagName("input");
+                    for (var i = 0 ; i < items.length ; i ++) 
+                    {
+                        items[i].checked = false;
+                    }
+                    
+                    var blocked = localStorage["blocked"];
+                    
+                    if (blocked == null) {
+                        resetBlockList();
+                        blocked = localStorage["blocked"];
+                    }
+
+                    var blocked_list = blocked.split('|');
+                    for (var i = 0 ; i < blocked_list.length ; i ++) 
+                    {
+                        var item = document.getElementById(blocked_list[i]);
+                        if (item != null)
+                            item.checked = true;
+                    }
+                    
+                    markClean();
+                }
+                
+                function save() {
+                    
+                    
+                    var items = document.getElementsByTagName("input");
+                    var blocked = "";
+                    for (var i = 0 ; i < items.length ; i ++) 
+                    {
+                        if (items[i].checked) 
+                        {
+                            blocked += ("|" + items[i].id);
+                        }
+                    }
+                    localStorage["blocked"] = blocked; 
+                    
+                    markClean();
+                    
+                    chrome.extension.getBackgroundPage().init();
+                }
+                
+                function resetBlockList() {
+                    localStorage["blocked"] = "|CNP|bigtennetwork.com|foxbusiness.com|thefoxmoviechannel.com|foxnews.com|foxcable.com|foxsports.com|foxsportsesp.com|foxsoccer.com|fuel.tv|fxnetworks.com|animals.nationalgeographic.com|nationalgeographic.com|natgeotv.com|speedtv.com|startv.com|stats.com|TV|foxsports.com.au|mynetworktv.com|myfoxny.com|my9tv.com|myfoxla.com|my13la.com|myfoxchicago.com|my50chicago.com|myfoxphilly.com|myfoxboston.com|myfoxdfw.com|watchmy27.com|myfoxdc.com|upn20dc.com|myfoxtwincities.com|my29tv.com|myfoxdetroit.com|myfoxatlanta.com|my24wutb.com|myfoxhouston.com|my20houston.com|myfoxtampabay.com|myfoxorlando.com|myfoxphoenix.com|my45.com|myfoxmemphis.com|myfoxaustin.com|wogx.com|PUB|alphamagazine.com.au|dailytelegraph.com.au|donnahay.com.au|dowjones.com|goldcoast.com.au|harpercollins.com|harpercollins.com.au|harpercollins.ca|harpercollinschildrens.com|harpercollins.co.in|harpercollins.co.nz|harpercollins.co.uk|heraldsun.com.au|homelife.com.au|nypost.com|newsamerica.com|newsint.co.uk|newsoftheworld.co.uk|ntnews.com.au|postcourier.com.pg|smartsource.net|sundayheraldsun.com.au|adelaidenow.com.au|sundaytasmanian.com.au|perthnow.com.au|theadvertiser.news.com.au|theaustralian.com.au|couriermail.com.au|thedaily.com|themercury.com.au|thesundaymail.com.au|telegraph.co.uk|thesun.co.uk|thesundaytimes.co.uk|thetimes.co.uk|timesonline.co.uk|wsj.com|weeklytimesnow.com.au|zondervan.com";
+                }
+                
+                function selectGroup(item) {
+                    
+                    var items = document.getElementsByName(item.id);
+                    for (var i = 0 ; i < items.length ; i ++) {
+                        items[i].checked = item.checked;
+                    }
+                    
+                    markDirty();
+                    
+                }
+                
+                function markDirty() {
+                    saveButton.disabled = false;
+                }
+                
+                function markClean() {
+                    saveButton.disabled = true;
+                }
+                </script>
+    </body>
+</html>
