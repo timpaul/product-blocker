@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Website Blocked</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script>
+            function unblockThis() {
+                var hostname = window.location.href.split("?")[1];
+                chrome.extension.sendRequest({
+                    type: "unblock_next", 
+                    url: hostname
+                });
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div id="header"><h1>Murdoch Blocked</h1></div>
+        
+        <div class="section-header first">
+            This website has been blocked.
+        </div>
+        <div class="section-items">
+        <br>
+        Please visit the options page to unblock this website or customize your settings.
+        <p>
+        
+        <button type="button" onclick="window.history.go(-2)">Go back</button>
+        <button type="button" onclick="window.location='options.html'">Options</button>
+        <p>
+        <a href="javascript:unblockThis(); window.history.go(-1);">Unblock and Continue</button>
+        </div>
+  
+    </body>
+</html>
