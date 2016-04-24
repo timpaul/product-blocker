@@ -1,15 +1,29 @@
 {
-  "name": "Murdoch Block",
-  "version": "1.0",
-  "description": "Blocks websites owned by Newscorp.",
-  "background_page": "background.html",
-  "options_page": "options.html",
+  "manifest_version": 2,
+
+  "name": "Product Blocker",
+  "version": "0.1",
+  "description": "Blocks products based on your ethical principles",
+  "icons": { "128": "icon-128.png" },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
   "permissions": [
     "tabs", "http://*/*"
   ],
-  "icons" : {
-    "48" : "icon-48.png",
-    "128" : "icon-128.png"
+  "browser_action": {
+    "default_icon": {                    
+      "19": "icon-19.png",   
+      "48": "icon-48.png",  
+      "128": "icon-128.png"  
+    },
+    "default_title": "Product Blocker",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
   },
   "content_scripts": [
     {
