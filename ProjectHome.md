@@ -1,0 +1,1 @@
+Chrome extension to block websites owned by newscorp.
